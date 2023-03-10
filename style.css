@@ -1,0 +1,113 @@
+body,html{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}   
+
+.accordeon{
+    width: 45vw;
+    margin: 0 auto;
+}
+
+.accordeon__label{
+    display: block;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.accordeon__title-cntnr{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordeon__title{
+    display: flex;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+    transition: .5s ease-in-out;
+}
+
+.accordeon:hover .accordeon__title{
+    color: brown;
+    transition: .5s ease-in-out;
+}
+
+.accordeon:hover .accordeon__icon{
+    opacity: 1;
+    transition: .5s ease-in-out;
+}
+
+.accordeon__icon{
+    transform: rotate(45deg);
+    background-image: url(./png/cross.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .5s ease-in-out;
+}
+
+.accordeon__checkbox{
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.accordeon__mem{
+    max-height: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    transition: .5s ease-in-out;
+    width: 45%;
+}
+
+.accordeon__label:hover .accordeon__mem{
+    max-height: 1000px;
+    transition: .8s ease-in-out;
+}
+
+.accordeon__label{
+    transition: .5s ease-in-out;
+}
+
+.accordeon__label:hover .accordeon__icon{
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+}
+
+.accordeon__checkbox:checked ~ .accordeon__label .accordeon__mem{
+    max-height: 1000px;
+    transition: .8s ease-in-out;
+}
+
+.accordeon__checkbox:checked ~ .accordeon__label .accordeon__icon{
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+}
+
+.accordeon__checkbox:checked ~ .accordeon__label .accordeon__title{
+    color: blueviolet;
+} 
