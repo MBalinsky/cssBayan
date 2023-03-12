@@ -83,17 +83,17 @@ body,html{
     transition: .5s ease-in-out;
 }
 
-.accordeon__checkbox:checked ~ .accordeon__label .accordeon__mem{
+.accordeon__checkbox:checked + .accordeon__label .accordeon__mem{
     max-height: 1000px;
     transition: .8s ease-in-out;
 }
 
-.accordeon__checkbox:checked ~ .accordeon__label .accordeon__icon{
+.accordeon__checkbox:checked + .accordeon__label .accordeon__icon{
     transform: rotate(0deg);
     transition: .5s ease-in-out;
 }
 
-.accordeon__checkbox:checked ~ .accordeon__label .accordeon__title{
+.accordeon__checkbox:checked + .accordeon__label .accordeon__title{
     color: blueviolet;
 } 
 
